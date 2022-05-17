@@ -3,7 +3,7 @@
 ::goto start
 ::如果不要自動更新,刪除上方那行的::
 
-set version=1
+set version=version-1
 set file_name=auto_updata.bat
 
 title check updata
