@@ -12,7 +12,7 @@ mode con lines=5 cols=25
 ::link
 
 set server_host=github.com
-set server_url=https://raw.githubusercontent.com/chenghao0415/Auto_bat_updata/main
+set server_url=https://github.com/chenghao0415/Auto_bat_updata/blob/main/
 
 del /f /q %cd%\updata.bat
 cls
@@ -38,7 +38,7 @@ if %new_version%==%version% (
 	del /q %cd%\version.txt
 	goto start
 ) else (
-	
+	echo Download new version!
 	del /q %cd%\version.txt
 	echo @echo off>>%cd%\updata.bat
 	echo title updata>>%cd%\updata.bat
