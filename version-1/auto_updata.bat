@@ -49,7 +49,7 @@ if %new_version%==%version% (
 	echo cls>>%cd%\updata.bat
 	echo start /d %cd% %cd%\%file_name%>>%cd%\updata.bat
 	echo exit>>%cd%\updata.bat
-	start /d %cd% /min %cd%\updata.bat
+	start /d %cd% /min /i %cd%\updata.bat
 	exit
 )
 
