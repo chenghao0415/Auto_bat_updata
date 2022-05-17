@@ -34,15 +34,19 @@ bitsadmin.exe /transfer "download" %server_url%/version.txt %cd%\version.txt>nul
 for /f %%i in (%cd%/version.txt) do set new_version=%%i
 
 if %new_version%==%version% (
+	echo This version is the latest!
 	del /q %cd%\version.txt
 	goto start
 ) else (
+	
 	del /q %cd%\version.txt
 	echo @echo off>>%cd%\updata.bat
 	echo title updata>>%cd%\updata.bat
 	echo mode con cols=70 lines=15>>%cd%\updata.bat
+	echo echo Download new version!>>%cd%\updata.bat
 	echo del /q %cd%\%file_name%>>%cd%\updata.bat
 	echo bitsadmin.exe /transfer "download" %server_url%/%new_version%/%file_name% %cd%\%file_name%>>%cd%\updata.bat
+	echo cls>>%cd%\updata.bat
 	echo start /d %cd% %cd%\%file_name%>>%cd%\updata.bat
 	echo exit>>%cd%\updata.bat
 	start /d %cd% /min %cd%\updata.bat
