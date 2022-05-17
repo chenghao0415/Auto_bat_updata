@@ -58,3 +58,4 @@ cls
 
 echo ya
 pause
+exit
