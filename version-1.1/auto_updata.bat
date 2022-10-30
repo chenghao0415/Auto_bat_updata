@@ -11,12 +11,12 @@ mode con lines=5 cols=25
 
 ::link
 
-set server_host=github.com
 set server_url=https://raw.githubusercontent.com/chenghao0415/Auto_bat_updata/main
 
 del /f /q %cd%\updata.bat
 cls
 
+FOR /F "tokens=2 delims=/" %%i in ("%server_url%") do set server_host=%%i
 ping -n 2 %server_host%>nul
 
 if %errorlevel%==0 (
