@@ -68,9 +68,9 @@ start /d "%cd%" /min /i %cd%\%file_name%_updata.bat
 
 :main
 cls
+title title
+::here is the main code!
 
 echo here is the main code!
 pause
 exit
-
-
