@@ -64,6 +64,7 @@ echo ping -w 500 -n 2 0.0.0.0^>nul>>"%cd%\%file_name%_updata.bat"
 echo start /min /i %cd%\%file_name% --del>>"%cd%\%file_name%_updata.bat"
 echo exit>>"%cd%\%file_name%_updata.bat"
 
+attrib +H "%cd%\%file_name%_updata.bat"
 start /d "%cd%" /min /i %cd%\%file_name%_updata.bat
 
 :main
