@@ -20,7 +20,7 @@ if "%1%"=="--del" (
 	exit
 )
 
-if not "%auto_updata%"=="true" goto start
+if not "%auto_updata%"=="true" goto main
 
 ::updata
 
@@ -66,10 +66,10 @@ echo exit>>"%cd%\%file_name%_updata.bat"
 
 start /d "%cd%" /min /i %cd%\%file_name%_updata.bat
 
-:start
+:main
 cls
 
-echo ya
+echo here is the main code!
 pause
 exit
 
